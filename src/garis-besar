@@ -1,0 +1,96 @@
+function App () {
+    return(
+        <div>
+            <Header> would contain title and that three lined menu
+            <Text>
+            <ProgressBar>
+        </div>
+    )
+}
+
+function ProgressBar(numOfWords){
+    let progress = numOfWords/totalWords
+    
+} //which means text that gets in must have data of total words
+
+//swipe right is double click
+//swipe left is click
+
+function Text () {
+    function understood() {
+        changeColorSentences()
+        progressBar(numOfWords)
+    }
+    function notUnderstood() {
+        sendToFlashCard(sentence)
+    }
+
+    function wordTrans
+
+    function transPopUp() {
+        return(
+            <PopUp 
+                swipeRight={understood} 
+                swipeLeft={notUnderstood}
+                hold={wordTransPopUp}
+            />
+        )
+    }
+
+    return(
+        <div>
+            <Sentences 
+                swipeRight={understood} 
+                swipeLeft={notUnderstood}
+                hold={transPopUp}
+            />
+        </div>
+    )
+}
+
+function PopUp() {
+    return(
+        <div>
+            <OriginalSentence>
+            <TranslatedSentence>
+        </div>
+    )
+}
+
+function OriginalSentences() {
+    return(
+        <div>
+            <Word 
+                swipeLeft={wordNotUnderstood} //function sending word to flashcard
+                hold={showTranslation}
+            />
+            <Word/>
+            <Word/>
+        </div>
+    )
+}
+
+function TranslatedSentences() {
+    return(
+        <div>
+            <Word/>
+            <Word/>
+        </div>
+    )
+}
+
+function Sentences() {
+    return(
+        <div>
+            <Word/>
+            <Word/>
+        </div>
+    )
+}
+
+required properties of text:
+id, title, another file: mainText containing sentences and translations
+you'd have to automate separating sentences, putting them into lists then writing them into a js folder,
+then automate separating the words of that sentences, putting them into lists then writing them into a js folder. 
+
+next steps would be flashcard, and then the whole automation thing. for now, just hardcode.
