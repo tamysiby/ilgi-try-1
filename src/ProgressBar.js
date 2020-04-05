@@ -1,37 +1,24 @@
 import React from 'react'
 import psychoData from './psychoData'
-//import {progress} from './Sentence'
 
-// function Progress(props){
-//     return(
-//         <div>{progress}</div>
-//     )
-// }
+class ProgressBar extends React.Component {
+    render(){
+        var totalWords = 0;
 
-function ProgressBar(props) {
-    //const [progressUp, setProgressUp] = useState(0)
-    //setProgressUp(progressUp + addProgress)
-    
-    console.log(props.wordcount)
+        for(var i=0 ; i < psychoData.length ; i++){
+            totalWords = totalWords + psychoData[i].wordcount
+        }
 
+        const percentage = this.props.progress / totalWords * 100;
+        //how to round numbers into nearest whole number
 
-
-    var totalWords = 0
-    for( var i=0 ; i<psychoData.length ; i++ ){
-        totalWords = totalWords + psychoData[i].wordcount
+        return(
+            <div className='progressbar'>
+                {Math.round(percentage)}%
+            </div>
+        )
     }
-
-    return(
-        <div className="progressbar">
-            progress bar
-            {props.wordcount}/{totalWords}
-        </div>
-    )
-    //return(
-    //    <div className="progressbar">
-    //    {progressUp}/{totalWords}
-    //    </div>
-    //)
 }
+
 
 export default ProgressBar

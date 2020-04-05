@@ -4,47 +4,57 @@ import Header from './Header'
 import './App.css'
 import ProgressBar from './ProgressBar'
 
-function App() {
+/*
+to do list:
+reset button
+make <Word /> component
+progress bar
+  get progress bar bootstrap
+with routher, make main page that leads to texts, flashcards
+  get router
+navbar
+make flashcards page (set this out on paper)
+make data changeable, learn how to connect to database
+  that or make page that would allow inputing data (admin side bgitu)
+*/
 
+class App extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      progress : 0,
+      show : true,
+    };
 
-  return(
-    <div className="body">
-      <Header/>
-      <TextBody />
-      <ProgressBar />
-    </div>
+    this.addProgress = this.addProgress.bind(this);
+    this.subProgress = this.subProgress.bind(this);
 
-  )
+  };
 
+  addProgress = (wc) => {
+    this.setState({
+      progress : this.state.progress + wc,
+    });
+  }
+
+  subProgress = (wc) => {
+    this.setState({
+      progress : this.state.progress - wc,
+    });
+  };
+
+  render(){
+    return(
+      <div>
+        <div className="body">
+          <Header />
+          <TextBody addProgress={this.addProgress} subProgress={this.subProgress}/>
+          <ProgressBar progress={this.state.progress}/>
+        </div>
+      </div>
+    )
+  }
 }
 
 
 export default App;
-
-//hooks
-  // const [isShown, setIsShown] = React.useState(false);
-  // let className = 'text';
-  // return(
-  //   <div className='wrapper'>
-  //     <p 
-  //       className='text'
-  //       // onMouseEnter={() => setIsShown(true)}
-  //       // onMouseLeave={() => setIsShown(false)}
-  //       >
-  //       포기하지마
-  //     </p>
-  //   </div>
-  // )
-
-
-  //context api
-//const myContext = React.createContext()
-
-// function MyProvider()  {
-//   return(
-//     <myContext.Provider value="">
-
-//     </myContext.Provider>
-//     //insert data in between those
-//   )
-// }

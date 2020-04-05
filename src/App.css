@@ -4,6 +4,19 @@
   flex-direction: column;
 }
 
+.box{
+  background-color: rgb(78, 86, 160);
+  color: #FAF8D9;
+  position: fixed;
+  right: 20px;
+  left: 20px;
+  top: 25%;
+  bottom: 85px;
+  z-index: 99;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
 .wrapper {
   background-color:#FAF8D9;
   flex: 1 0 auto;
@@ -53,6 +66,20 @@ p {
   border: 1px #ddcba4;
   padding: 1.18em 1.32em 1.03em;
   border-width: 3px;
+}
+
+.no-text {
+  display: block;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  text-justify: auto;
+  border: none;
+  padding: 1.18em 1.32em 1.03em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-size: 1.25rem;
 }
 
 .progressbar {
