@@ -1,0 +1,210 @@
+
+$main: #fae7cb; //index.css body color
+$main-light: #f8f0e4;
+$box: #ff7272;
+$bars: #ffb385;
+$p-hover: rgba(240, 215, 203, 0.384);
+$h-hover: #f8dbc9;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $main;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*
+color palette:
+gray scale - https://colorhunt.co/palette/130807
+orange - https://colorhunt.co/palette/106734
+yellow blu - https://colorhunt.co/palette/100864
+green turquoise - https://colorhunt.co/palette/101477
+yellow pink - https://colorhunt.co/palette/177581
+*/
+
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  background-color: $box;
+  color: $main-light;
+  position: fixed;
+  right: 25%;
+  left: 25%;
+  top: 25%;
+  bottom: 85px;
+  z-index: 99;
+  padding-left: 20px;
+  padding-top: 20px;
+  border-radius: 1em;
+  box-shadow: 5px 5px 3px rgba(128, 128, 128, 0.342);
+}
+
+.header {
+  color: $main-light;
+  background-color: $bars;
+  //height: 50px;
+ // padding: 25px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.342);
+}
+
+//------------------NAVBAR---------------
+.navbar {
+  overflow: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.navbar p {
+  float: left;
+  display: block;
+  color: $main-light;
+  text-align: center;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: $main-light;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.navbar a.right { //right aligned link
+  float: right;
+}
+
+.header a:hover {
+  background-color: $main;
+  color: $bars;
+  font-weight: bold;;
+}
+//------------------NAVBAR---------------
+.textbody p {
+  max-width: max-content;
+  margin: 0 auto;
+  transition: color 300ms linear; 
+  text-align: left; 
+  line-height: 1;
+}
+
+.footer {//CHANGE THIS TO FOOTER
+  background-color: $bars;
+  display: inline;
+  color: $main-light;
+  height: 50px;
+  margin-top: -45px;
+  padding: 15px;
+  border-top: 1px solid rgba(128, 128, 128, 0.342);
+}
+
+.footer p {
+  float: left;
+  display: block;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.progress {
+	background-color: $main-light;
+  border-radius: 20px;
+  display: block;
+  float: left;
+	margin: 20px 0;
+	height: 15px;
+  width: 90%;
+}
+
+.progress-done {
+	background: linear-gradient(to right, #ff7272, #ffd31d);
+	border-radius: 20px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}
+
+.push {
+  height: 50px;
+}
+
+.sentencewrapper {
+  background-color: $main;
+  flex: 1;
+  margin-top: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: block;
+}
+
+.textbody { //previously known as wrapper
+  background-color:$main;
+  //flex: 1 0 auto;
+ /* padding: 1.5rem 0;*/
+  //margin-top: 0px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: inline-block;
+  border: black 10em;
+  overflow: auto; //check if this is useful after adding more text
+}
+
+//------------------TEXT---------------
+.text {
+  display: block;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  text-justify: auto;
+  border: none;
+  padding: 1.18em 1.32em 1.03em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.text:hover {
+ /* color: #493a3798; */
+  background: $p-hover;
+  font-weight: bold;
+  border-radius: 1em;
+  padding: 1.18em 1.32em 1.03em;
+  border-width: 3px;
+}
+
+.no-text {
+  display: block;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  text-justify: auto;
+  border: none;
+  padding: 1.18em 1.32em 1.03em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+//------------------TEXT---------------
+

@@ -12,7 +12,7 @@ class TextBody extends React.Component{
 
     render() {
         return(
-            <div className="wrapper">
+            <div className="textbody">
                 {this.state.data.map(data =>
                     <Sentence
                         key={data.id}

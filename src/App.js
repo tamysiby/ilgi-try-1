@@ -1,15 +1,15 @@
 import React from 'react'
 import TextBody from './TextBody'
 import Header from './Header'
-import './App.css'
-import ProgressBar from './ProgressBar'
+import './index.scss'
+import Footer from './Footer'
 
 /*
 to do list:
 reset button
 make <Word /> component
 progress bar
-  get progress bar bootstrap
+  merge progress bar to class
 with routher, make main page that leads to texts, flashcards
   get router
 navbar
@@ -46,10 +46,10 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <div className="body">
+        <div className="container">
           <Header />
           <TextBody addProgress={this.addProgress} subProgress={this.subProgress}/>
-          <ProgressBar progress={this.state.progress}/>
+          <Footer progress={this.state.progress}/>
         </div>
       </div>
     )
